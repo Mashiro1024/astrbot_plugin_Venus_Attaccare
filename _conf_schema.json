@@ -1,0 +1,103 @@
+{
+  "enable": {
+    "description": "是否启用本插件",
+    "type": "bool",
+    "default": true
+  },
+  "commands": {
+    "description": "触发攻击的指令关键词列表（消息需以这些词开头并 @ 目标）",
+    "type": "list",
+    "hint": "例如：攻击、戳一戳。修改后立即生效。",
+    "default": ["攻击", "戳一戳"]
+  },
+  "intensive_commands": {
+    "description": "加强模式指令列表（触发后发送更多次戳一戳）",
+    "type": "list",
+    "hint": "例如：攻击！、戳一戳！。加强模式优先于普通指令匹配。",
+    "default": ["攻击！", "攻击!", "戳一戳！", "戳一戳!"]
+  },
+  "cooldown_seconds": {
+    "description": "戳一戳冷却时间（秒）",
+    "type": "int",
+    "hint": "同一群（或全局）在此时间内无法再次触发攻击。",
+    "default": 5
+  },
+  "per_group_cooldown": {
+    "description": "冷却是否按群独立计算",
+    "type": "bool",
+    "hint": "开启：每个群各自冷却；关闭：所有群共享一个冷却时间。",
+    "default": true
+  },
+  "min_pokes": {
+    "description": "普通模式最少戳一戳次数",
+    "type": "int",
+    "default": 1
+  },
+  "max_pokes": {
+    "description": "普通模式最多戳一戳次数",
+    "type": "int",
+    "default": 3
+  },
+  "intensive_min_pokes": {
+    "description": "加强模式最少戳一戳次数",
+    "type": "int",
+    "default": 5
+  },
+  "intensive_max_pokes": {
+    "description": "加强模式最多戳一戳次数",
+    "type": "int",
+    "default": 10
+  },
+  "poke_interval": {
+    "description": "多次戳一戳之间的间隔（秒）",
+    "type": "float",
+    "hint": "过小的间隔可能被平台风控，建议不小于 0.3。",
+    "default": 0.5
+  },
+  "require_at": {
+    "description": "是否必须 @ 目标才能触发攻击",
+    "type": "bool",
+    "hint": "关闭后，未 @ 目标时将对指令发送者本人发动攻击（戳一戳）。",
+    "default": true
+  },
+  "reply_on_no_target": {
+    "description": "开启 require_at 且未 @ 目标时，是否回复提示消息",
+    "type": "bool",
+    "default": true
+  },
+  "no_target_messages": {
+    "description": "未 @ 目标时的回复话术（随机取一条）",
+    "type": "list",
+    "default": ["要先@一个目标才能发动攻击哦～", "目标不明，请 @ 一个人试试～", "想打谁？@一下我看看～"]
+  },
+  "block_self_poke": {
+    "description": "是否禁止对机器人本体发送戳一戳",
+    "type": "bool",
+    "default": true
+  },
+  "self_poke_messages": {
+    "description": "尝试攻击机器人本体时的回复话术（随机取一条）",
+    "type": "list",
+    "default": ["诶？让我攻击我自己？我才不要～", "自己戳自己会掉血的，换个人吧！", "我的技能可不对自己释放～"]
+  },
+  "cooldown_messages": {
+    "description": "冷却期间的回复话术（随机取一条）",
+    "type": "list",
+    "default": ["技能还在冷却中，稍安勿躁～", "爪子太酸了，让我缓一缓～", "攻击太频繁会被警告的，过会儿再试～"]
+  },
+  "confirm_messages": {
+    "description": "触发成功后的确认话术（随机取一条）",
+    "type": "list",
+    "default": ["收到！目标已锁定，开戳！", "遵命，这就启动戳一戳程序！", "好哦，马上戳 Ta 一下～"]
+  },
+  "notify_poke_failure": {
+    "description": "戳一戳发送失败时是否向群里提示",
+    "type": "bool",
+    "default": true
+  },
+  "poke_failed_messages": {
+    "description": "戳一戳发送失败时的回复话术（随机取一条）",
+    "type": "list",
+    "default": ["呜…对方好像不接受戳一戳（可能设置了限制）", "攻击落空了，对方似乎无法被戳到"]
+  }
+}
