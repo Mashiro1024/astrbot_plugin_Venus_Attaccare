@@ -10,7 +10,6 @@ from astrbot.api.all import (
     EventMessageType,
     Star,
     event_message_type,
-    register,
 )
 import astrbot.api.message_components as Comp
 
@@ -24,14 +23,8 @@ _FALLBACK = {
 }
 
 
-@register(
-    "Venus_Attaccare",
-    "Mashiro1024",
-    "群聊戳一戳攻击插件：发送可配置指令并 @ 目标，机器人会向目标发送戳一戳（poke），冷却、次数、话术均可自定义。",
-    "1.0.0",
-    "https://github.com/Mashiro1024/astrbot_plugin_Venus_Attaccare",
-)
 class VenusPlugin(Star):
+    """发送"攻击 @用户"即可触发；发送"攻击！ @用户"触发加强模式（更多次戳一戳）。"""
     def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)
         self.config = config
