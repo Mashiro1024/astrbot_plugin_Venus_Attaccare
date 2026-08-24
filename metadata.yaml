@@ -2,7 +2,7 @@ name: astrbot_plugin_Venus_Attaccare # 插件标识符，英文，唯一
 display_name: Venus Attaccare # 插件在插件市场中的展示名称
 short_desc: 群聊戳一戳攻击插件：发送指令并 @ 目标，机器人向目标发送戳一戳（poke）。 # 插件市场卡片上的短描述
 desc: 群聊戳一戳插件：发送"攻击 @用户"（或 WebUI 中自定义的其他指令），机器人会向目标发送戳一戳（poke）。冷却时间、戳次数、加强模式、全部回复话术均可通过 WebUI 配置。本插件使用 AI 辅助开发。
-version: 1.0.0 # 插件版本号（遵循语义化版本规范）
+version: 1.0.1 # 插件版本号（遵循语义化版本规范）
 author: Mashiro1024 # 作者名称
 repo: https://github.com/Mashiro1024/astrbot_plugin_Venus_Attaccare # 插件仓库地址
 astrbot_version: ">=3.5.20" # 支持的 AstrBot 版本范围（PEP 440 格式，不加 v 前缀）
